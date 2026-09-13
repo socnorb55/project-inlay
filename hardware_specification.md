@@ -36,11 +36,81 @@ The controller shall contain:
 
 ### 3.1 Keys
 
+#### Requirements
 - 24 keys
 - 4×6 matrix
 - Individually addressable by firmware
 - Debounced in firmware
 - Suitable for QMK
+
+#### Key Matrix
+
+Key positions will be defined as:
+
+K00 K01 K02 K03 K04 K05
+K10 K11 K12 K13 K14 K15
+K20 K21 K22 K23 K24 K25
+K30 K31 K32 K33 K34 K35
+
+#### Key Behavior
+
+Supported Actions:
+
+- Press
+- Release
+
+A key press shall generate the configured key action and a release shall terminate the corresponding action where applicable
+
+#### Debouncing
+
+Key press shall not result in multiple unintended key events
+
+Key debouncing shall be handled by firmware
+
+#### Layers
+
+All keys shall operate according to the current layer
+
+Keys may have different functions on different layers
+
+Example:
+
+- Layer 0:
+    - K00 -> Q
+    - K01 -> W
+    - K02 -> E
+- Layer 1:
+    - K00 -> 1
+    - K01 -> 2
+    - K02 -> 3
+
+#### Key Actions
+
+All keys should be capable of triggering standard QMK/Vial actions:
+
+- Keyboard Keys
+- Modifiers
+- Modifier + Key Combination
+- Consumer/Media Keys
+- System Keys (Where Supported)
+- Mouse Buttons (Where Supported)
+- Macros
+
+#### Chorded Input
+
+Multiple key may be pressed simultaneously
+
+The firmware shall correctly distinguish simultaneous key
+presses within the limitations of the selected matrix hardware
+and switch technology
+
+#### Repeat Behavior
+
+Keys assigned to normal keyboard actions shall support normal
+USB HID key-repeat behavior through the host operating system
+
+The device shall not implement unnecessary custom repeat
+behavior unless explicitly required
 
 ### 3.2 Master Encoder
 
