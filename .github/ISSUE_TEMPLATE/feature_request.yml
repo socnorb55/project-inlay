@@ -1,0 +1,62 @@
+name: Feature request
+description: Suggest an improvement for the macro pad, PCB, firmware, or project documentation.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement. Please focus on the problem the idea would solve.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      description: Give a short name for the proposed feature.
+      placeholder: Add a configurable layer for media controls
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - PCB or hardware
+        - Rust firmware
+        - Build or flashing process
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What limitation or use case led to this request?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe how you think the feature could work. Include implementation or replication considerations when relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any other approaches or workarounds you have tried.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for duplicates.
+          required: true
+        - label: I have filled out all relevant sections of this template.
+          required: true
