@@ -1,6 +1,6 @@
 # Contributing to project-inlay
 
-Thanks for your interest in project-inlay, a custom macro pad built around custom PCBs and firmware written in Rust.
+Thanks for your interest in project-inlay, a custom macro pad built around custom PCBs and firmware.
 
 The project is still in its early stages. The goal is to document the hardware and firmware clearly enough that others can replicate the macro pad as it develops.
 
@@ -35,7 +35,7 @@ Keep commit messages concise and describe the user-visible or hardware-visible c
 
 ## Replicating the Project
 
-The project is not yet developed, so setup, build, flashing, and testing instructions are not available yet. Once the PCB design and Rust firmware exist, the project will document:
+The project is not yet developed, so setup, build, flashing, and testing instructions are not available yet. Once the PCB design and QMK firmware exist, the project will document:
 
 - Required tools and dependencies.
 - PCB fabrication and assembly steps.
