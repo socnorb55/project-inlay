@@ -22,7 +22,7 @@ body:
       label: Affected area
       options:
         - PCB or hardware
-        - Rust firmware
+        - QMK firmware
         - Build or flashing process
         - Documentation
         - Other
